@@ -59,6 +59,7 @@
     "@react-three/fiber": "^9.2.0",
     "@types/three": "^0.178.1",
     "hamo": "1.0.0-dev.6",
+    "lenis": "^1.3.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "three": "^0.178.0",

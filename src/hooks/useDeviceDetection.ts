@@ -9,7 +9,9 @@ export function useDeviceDetection() {
   const isMobile = useMediaQuery(`(max-width: ${breakpoint - 1}px)`)
   const isDesktop = useMediaQuery(`(min-width: ${breakpoint}px)`)
   const isReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)')
-  const isWebGL = isDesktop && !isReducedMotion
+  
+  // Always enable WebGL regardless of screen size, only disable for reduced motion
+  const isWebGL = !isReducedMotion
 
   // Check for low power mode with fallback for unsupported browsers
   const isLowPowerMode = useMediaQuery(
